@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <div class="form">
 					<h2>Login to your account</h2>
 					<form action="#" method="post">
-					  <input type="text" name="Username" placeholder="Username" required=" ">
+					  <input type="email" name="Email" placeholder="Email Address" required=" ">
 					  <input type="password" name="Password" placeholder="Password" required=" ">
 					  <input type="submit" value="Login">
 					</form>
@@ -209,10 +209,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <div class="form">
 					<h2>Create an account</h2>
 					<form action="#" method="post">
-					  <input type="text" name="Username" placeholder="Username" required=" ">
+					  <input type="text" name="Username" placeholder="First Name" required=" ">
+					  <input type="text" name="Username" placeholder="Last Name" required=" ">
 					  <input type="password" name="Password" placeholder="Password" required=" ">
+					  <span class="__show" id="showPassword">show<i class="fa fa-eye" aria-hidden="true"></i></span>
 					  <input type="email" name="Email" placeholder="Email Address" required=" ">
 					  <input type="text" name="Phone" placeholder="Phone Number" required=" ">
+					  <div class="checkbox">
+					  	<label>
+					  		<input type="checkbox" value="">
+					  		 	By clicking here, you have accepted our terms and conditions and our privacy policy.
+					  	</label>
+					  </div>
 					  <input type="submit" value="Register">
 					</form>
 				  </div>
@@ -408,6 +416,16 @@ $(document).ready(function(){
 				evt.preventDefault();
 			}
 		});
+
+		// preview and hide password
+		    $("#showPassword").click(function(){
+		      var foo = $(this).prev().attr("type");
+		      if(foo == "password"){
+		        $(this).prev().attr("type", "text");
+		      } else {
+		        $(this).prev().attr("type", "password");
+		      }
+		    });
 
 	</script>
 </body>

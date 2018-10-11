@@ -13,6 +13,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     margin-bottom: 1.5em;
 }
 
+.__mt{
+    margin-top: 2%;
+}
+
+.__vmore{
+    color: #333 !important;
+}
+.__vmore:hover{
+    color: yellow !important;
+}
+
 /*end*/
 
 
